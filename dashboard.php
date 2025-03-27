@@ -39,18 +39,14 @@
             background-color: white;
 
         }
-        table, th, td{
+        table th{
             border: 1px solid black;
-
-        }
-        th, td{
-            padding: 10px;
-            text-align: left;
-
+            
         }
         th{
+            padding: 10px;
+            text-align: left;
             background-color: #f1f1f1;
-
         }
     </style>
 </head>
@@ -74,9 +70,9 @@
                 $query->execute();
                 while($data = $query->fetch()) {
                     echo "<tr>";
-                    echo "<td>".htmlentities($data['No'])."</td>";
-                    echo "<td>".htmlentities($data['Username'])."</td>";
-                    echo "<td>".htmlentities($data['Password'])."</td>";
+                    echo "<td style='border: 1px solid black;'>".htmlentities($data['No'])."</td>";
+                    echo "<td style='border: 1px solid black;'>".htmlentities($data['Username'])."</td>";
+                    echo "<td style='border: 1px solid black;'>".htmlentities($data['Password'])."</td>";
                     echo "</tr>";
                 }
                 ?>
